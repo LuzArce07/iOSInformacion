@@ -24,6 +24,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
@@ -60,6 +62,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    func agregarContacto(){
+        
+        tvContactos.reloadData()
+        
+    }
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "goToEditar"{
@@ -70,7 +80,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             destino?.callbackActualizarTabla = recargarTabla
             
+        } else if segue.identifier == "goToAgregar"{
+            
+            
+            let destino = segue.destination as? AgregarContactoController
+            
+            contactos.append(Contacto(nombre: "", telefono: "", direccion: "", correo: "", foto: "foto4.png"))
+            
+            destino?.contacto = contactos[contactos.count-1]
+            
+            destino?.callbackActualizarTabla = recargarTabla
+            
         }
+        
+        
         
     }
     

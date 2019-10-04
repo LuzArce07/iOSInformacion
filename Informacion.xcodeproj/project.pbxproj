@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DB4C1EF2347E28A004CDBBE /* AgregarContactoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4C1EE2347E28A004CDBBE /* AgregarContactoController.swift */; };
 		3DB9D0EE2343F740000C7675 /* EditarContactoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB9D0ED2343F740000C7675 /* EditarContactoController.swift */; };
 		3DDC17FE2343E94F0077B0D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDC17FD2343E94F0077B0D5 /* AppDelegate.swift */; };
 		3DDC18002343E94F0077B0D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDC17FF2343E94F0077B0D5 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3DB4C1EE2347E28A004CDBBE /* AgregarContactoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarContactoController.swift; sourceTree = "<group>"; };
 		3DB9D0ED2343F740000C7675 /* EditarContactoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarContactoController.swift; sourceTree = "<group>"; };
 		3DDC17FA2343E94F0077B0D5 /* Informacion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Informacion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDC17FD2343E94F0077B0D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DB4C1ED2347E10E004CDBBE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		3DDC17F12343E94F0077B0D5 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +112,7 @@
 		3DDC17FC2343E94F0077B0D5 /* Informacion */ = {
 			isa = PBXGroup;
 			children = (
+				3DB4C1ED2347E10E004CDBBE /* New Group */,
 				3DDC17FD2343E94F0077B0D5 /* AppDelegate.swift */,
 				3DDC17FF2343E94F0077B0D5 /* ViewController.swift */,
 				3DDC18012343E94F0077B0D5 /* Main.storyboard */,
@@ -112,6 +122,7 @@
 				3DDC182B2343EA140077B0D5 /* Contacto.swift */,
 				3DDC182D2343EC490077B0D5 /* CeldaContactoController.swift */,
 				3DB9D0ED2343F740000C7675 /* EditarContactoController.swift */,
+				3DB4C1EE2347E28A004CDBBE /* AgregarContactoController.swift */,
 			);
 			path = Informacion;
 			sourceTree = "<group>";
@@ -265,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DB4C1EF2347E28A004CDBBE /* AgregarContactoController.swift in Sources */,
 				3DDC182E2343EC490077B0D5 /* CeldaContactoController.swift in Sources */,
 				3DDC18002343E94F0077B0D5 /* ViewController.swift in Sources */,
 				3DDC17FE2343E94F0077B0D5 /* AppDelegate.swift in Sources */,

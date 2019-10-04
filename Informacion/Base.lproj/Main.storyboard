@@ -81,7 +81,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Xgh-n3-cX3"/>
+                    <navigationItem key="navigationItem" id="Xgh-n3-cX3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iUf-14-Uva">
+                            <connections>
+                                <segue destination="C5w-GD-ntB" kind="show" identifier="goToAgregar" id="tVl-NJ-iyV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tvContactos" destination="oD7-m3-0yN" id="ryc-Dx-WHb"/>
                     </connections>
@@ -140,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dmv-xx-exi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011.5942028985507" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1028" y="-88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TFr-2s-Zaz">
@@ -166,6 +172,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qal-JU-xc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-610" y="139"/>
+        </scene>
+        <!--Agregar Contacto Controller-->
+        <scene sceneID="wCY-hf-nMU">
+            <objects>
+                <viewController id="C5w-GD-ntB" userLabel="Agregar Contacto Controller" customClass="AgregarContactoController" customModule="Informacion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Epq-lP-kfD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ej-lB-bgC">
+                                <rect key="frame" x="20" y="149" width="374" height="36"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rbB-Qm-UD8">
+                                <rect key="frame" x="20" y="210" width="374" height="35.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPU-qV-BdU">
+                                <rect key="frame" x="343" y="296.5" width="56" height="30"/>
+                                <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="doTapGuardar:" destination="C5w-GD-ntB" eventType="touchUpInside" id="Ol7-DX-j88"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4ej-lB-bgC" firstAttribute="height" secondItem="Epq-lP-kfD" secondAttribute="height" multiplier="0.04" id="3MH-Fa-BMj"/>
+                            <constraint firstItem="uPU-qV-BdU" firstAttribute="top" secondItem="rbB-Qm-UD8" secondAttribute="bottom" constant="51" id="6SV-rB-tPG"/>
+                            <constraint firstItem="oMT-dF-Riw" firstAttribute="trailing" secondItem="rbB-Qm-UD8" secondAttribute="trailing" constant="20" id="OIE-9J-EKp"/>
+                            <constraint firstItem="oMT-dF-Riw" firstAttribute="trailing" secondItem="uPU-qV-BdU" secondAttribute="trailing" constant="15" id="X3E-1n-6mK"/>
+                            <constraint firstItem="4ej-lB-bgC" firstAttribute="top" secondItem="oMT-dF-Riw" secondAttribute="top" constant="61" id="XhI-Uf-Kwc"/>
+                            <constraint firstItem="rbB-Qm-UD8" firstAttribute="height" secondItem="Epq-lP-kfD" secondAttribute="height" multiplier="0.04" id="id5-Zk-Pbn"/>
+                            <constraint firstItem="4ej-lB-bgC" firstAttribute="leading" secondItem="oMT-dF-Riw" secondAttribute="leading" constant="20" id="kRs-I2-mgb"/>
+                            <constraint firstItem="rbB-Qm-UD8" firstAttribute="top" secondItem="4ej-lB-bgC" secondAttribute="bottom" constant="25" id="lon-yP-uda"/>
+                            <constraint firstItem="oMT-dF-Riw" firstAttribute="trailing" secondItem="4ej-lB-bgC" secondAttribute="trailing" constant="20" id="mnh-rg-rer"/>
+                            <constraint firstItem="rbB-Qm-UD8" firstAttribute="leading" secondItem="oMT-dF-Riw" secondAttribute="leading" constant="20" id="oMT-3r-rn7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oMT-dF-Riw"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtNombre" destination="4ej-lB-bgC" id="rXd-ka-QYU"/>
+                        <outlet property="txtTelefono" destination="rbB-Qm-UD8" id="Qwy-xB-CXO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2EM-Gt-BYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="551"/>
         </scene>
     </scenes>
 </document>

@@ -18,6 +18,7 @@ class Contacto {
     
     
     init(nombre : String, telefono : String, direccion : String, correo : String, foto : String) {
+        
         self.nombre = nombre
         self.telefono = telefono
         self.direccion = direccion
